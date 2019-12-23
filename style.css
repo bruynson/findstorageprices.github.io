@@ -1,15 +1,106 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+body {
+	margin:0;
+	padding: 0;
+	background: white;
+}
 p {
-font-family: "aglet slab";
+	font-family: "arial";
+	margin: 20;
 }
 h1 {
 	font-family: "proxima nova";
+	margin: 20;
+	padding: 20;
 }
 h2 {
 	font-family: "proxima nova";
 }
 h4 {
-	font-family: "aglet slab";
+	font-family: "arial";
 }
 table {
-	font-family: "aglet slab";
+	font-family: "arial";
+	margin: 20;
+	padding: 20;
 }
+
+
+/* remove these because they were interfering
+
+table {
+	font-family: "arial";
+	margin: 20;
+}
+tr {
+	margin: 20;
+}
+
+
+
+this is the glowy button. I removed the following:
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	position: absolute;
+
+
+*/
+
+
+table a {
+	width: 400px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: white;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 30px;
+	z-index: 1;
+}
+table a:hover {
+	animation: animate 8s linear infinite;
+}
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+	100% {
+		background-position: 400%;
+	}
+}
+table a:before {
+	content: '';
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	z-index: -1;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 40px;
+	opacity: 0;
+	transition: 0.5s;
+}
+table a:hover:before {
+	filter: blur(20px);
+	opacity: 1;
+	animation: animate 8s linear infinite;
+}
+
+
+
+
